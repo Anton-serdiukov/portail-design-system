@@ -99,12 +99,12 @@
 
 <template>
   <div :class="['input', { sm, md, lg } ]">
-    <div
+    <span
       v-if="label"
       class="label-text"
     >
       {{ label }}
-    </div>
+    </span>
     <div
       :disabled="disabled"
       :class="['field', {
@@ -403,15 +403,15 @@ export default {
     }
 
     &.sm {
-      width: 144px !important;
+      width: 144px;
     }
 
     &.md {
-      width: 252px !important;
+      width: 252px;
     }
 
     &.lg {
-      width: 464px !important;
+      width: 464px;
 
       @media @screen-small {
         &.lg {
@@ -502,7 +502,7 @@ export default {
       left: 0 !important;
       width: 100%;
       background-color: @color-white;
-      box-shadow: 0 0 4px @color-gray-500;
+      box-shadow: @card-shadow;
 
       .select-item {
         padding: 0.5em;
